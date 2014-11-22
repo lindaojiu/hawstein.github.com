@@ -1,189 +1,837 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>GreenHat's Blog</title>
-    <meta name="author" content="GreenHat" />
-    <link href="http://gangliao.me/blog.html"
-    rel="alternate" title="GreenHat's Blog" type="application/atom+xml" />
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Cracking the coding interview--问题与解答</title>
+        <meta name="author" content="Hawstein" />
+        <link href="http://hawstein.com/atom.xml"
+        rel="alternate" title="Hawstein's Blog" type="application/atom+xml" />
 
-    <!-- Homepage CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="/assets/css/app.css" type="text/css" media="screen" charset="utf-8" />
+        <!-- Homepage CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="/assets/css/app.css" type="text/css" media="screen" charset="utf-8" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
 
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" media="screen" charset="utf-8" />
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" media="screen" charset="utf-8" />
 
-    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
-      <!-- Fonts -->
-      <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
-      </head>
+        <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+            <!-- Fonts -->
+            <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    </head>
 
-      <body>
-  <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/blog.html">GreenHat's Blog</a>
-  <ul class="nav">
-    <li class="active"><a href="/blog.html">Home</a></li>
-    <li ><a href="/archive.html">Archive</a></li>
-    <li ><a href="/categories.html">Categories</a></li>
-    <li ><a href="/sitemap.html">Sitemap</a></li>
-    <li ><a href="/about.html">About</a></li>
-  </ul>
-  <ul class="nav pull-right">
-    <li ><a href="/atom.xml">Subscribe</a></li>
-  </ul>
-    </div>
-  </div>
-</div>
+                <body>
+                <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                <div class="container">
+                <a class="brand" href="/">Hawstein's Blog</a>
+                <ul class="nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li ><a href="/archive.html">Archive</a></li>
+                    <li ><a href="/categories.html">Categories</a></li>
+                    <li ><a href="/sitemap.html">Sitemap</a></li>
+                    <li ><a href="/about.html">About</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li ><a href="/atom.xml">Subscribe</a></li>
+                </ul>
+                </div>
+                </div>
+                </div>
 
-  <div class="container">
-    <h1> GreenHat's Blog</h1>
-<div style="line-height:180%;">
-    作者：GreenHat<br>
-    主页：<a href="http://gangliao.me">gangliao.me</a><br>
-    出处：<a href="/blog.html">gangliao.me/blog</a><br>
-    声明：转载请注明作者及出处。<br><br>
-</div>
+                <div class="container">
+                    <div id="post">
+                        <h1>
+                            <a href="/posts/ctci-solutions-contents.html">Cracking the coding interview--问题与解答</a>
+                        </h1>
+                        <div class="authoring">
+                            March 14, 2013
+                        </div>
+                        <div style="line-height:180%;">
+                            作者：Hawstein<br>
+                            出处：<a href="/posts/ctci-solutions-contents.html">http://hawstein.com/posts/ctci-solutions-contents.html</a><br>
+                            声明：本文采用以下协议进行授权： <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a> ，转载请注明作者及出处。<br><br>
+                        </div>
 
-<h1> Newest 10 Posts</h1>
-<ul class="posts">
+                        <h2>前言</h2>
 
-    <li><span class="post_date">November 20, 2014</span> &raquo; <a href="/posts/Thrust-Passing-device_vector-to-Kernel.html">Thrust -  Passing device_vector to Kernel</a></li>
+                        <p>《Cracking the coding interview》是一本被许多人极力推荐的程序员面试书籍，
+                        详情可见：<a href="http://www.careercup.com/book">http://www.careercup.com/book</a>。
+                        里面有150道程序员面试题目及相应的解答。书中大部分是编程题目，
+                        并且配有相应的java程序(有些地方有错误或是有更优的方案)。我把书中的题目做了一遍，
+                        并且记录下来，包含自己对问题的一些思路及看法，许多问题给出了两种以上的解答方案。
+                        由于个人平时使用较多的是C++，所以程序是用C++编写，所有的代码都托管在Github上：</p>
 
-    <li><span class="post_date">November 17, 2014</span> &raquo; <a href="/posts/Parallel-Suffix-Array-on-GPU.html">Dynamic Parallel Skew Algorithm for Suffix Array on GPU</a></li>
+                        <p><a href="https://github.com/Hawstein/cracking-the-coding-interview">https://github.com/Hawstein/cracking-the-coding-interview</a></p>
 
-    <li><span class="post_date">November 15, 2014</span> &raquo; <a href="/posts/vim-tutorials.html">Vim Tutorials</a></li>
+                        <p>记录下来的主要目的是加深自己对问题的理解，如果此外还能对一两个人起到帮助作用，
+                        那真真是再好不过了。:P</p>
 
-    <li><span class="post_date">November 14, 2014</span> &raquo; <a href="/posts/how-to-write-paper.html">How to write a great research paper</a></li>
+                        <h2>目录</h2>
 
-    <li><span class="post_date">November 13, 2014</span> &raquo; <a href="/posts/markdown-syntax.html">Markdown Syntax</a></li>
+                        <p><strong>Chapter 1 | Arrays and Strings</strong></p>
 
-    <li><span class="post_date">November 12, 2014</span> &raquo; <a href="/posts/Parallel-Computing-Bootcamp.html">Parallel Computing BootCamp</a></li>
+                        <p>1.1
+                        <a href="/posts/1.1.html">Implement an algorithm to determine if a string has all unique
+                            characters. What if you can not use additional data structures?
+                        </a></p>
 
-    <li><span class="post_date">January 20, 2014</span> &raquo; <a href="/posts/google-java-style.html">Google Java编程风格指南</a></li>
+                        <p>1.2
+                        <a href="/posts/1.2.html">Write code to reverse a C-Style String. (C-String means that “abcd”
+                            is represented as five characters, including the null character.)
+                        </a></p>
 
-    <li><span class="post_date">February  1, 2013</span> &raquo; <a href="/posts/12.6.html">Cracking the coding interview--Q12.6</a></li>
+                        <p>1.3
+                        <a href="/posts/1.3.html">Design an algorithm and write code to remove the duplicate characters in a string
+                            without using any additional buffer. NOTE: One or two additional variables are fine.
+                            An extra copy of the array is not.
+                            FOLLOW UP
+                            Write the test cases for this method.
+                        </a></p>
 
-    <li><span class="post_date">January 31, 2013</span> &raquo; <a href="/posts/12.5.html">Cracking the coding interview--Q12.5</a></li>
+                        <p>1.4
+                        <a href="/posts/1.4.html">Write a method to decide if two strings are anagrams or not.
+                        </a></p>
 
-    <li><span class="post_date">January 30, 2013</span> &raquo; <a href="/posts/12.4.html">Cracking the coding interview--Q12.4</a></li>
+                        <p>1.5
+                        <a href="/posts/1.5.html">Write a method to replace all spaces in a string with ‘%20’.
+                        </a></p>
 
-</ul>
+                        <p>1.6
+                        <a href="/posts/1.6.html">Given an image represented by an NxN matrix, where each pixel in the image is 4
+                            bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
+                        </a></p>
+
+                        <p>1.7
+                        <a href="/posts/1.7.html">Write an algorithm such that if an element in an MxN matrix is 0, its entire row and
+                            column is set to 0.
+                        </a></p>
+
+                        <p>1.8
+                        <a href="/posts/1.8.html">Assume you have a method isSubstring which checks if one word is a substring of
+                            another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using
+                            only one call to isSubstring (i.e., “waterbottle” is a rotation of “erbottlewat”).
+                        </a></p>
+
+                        <p><strong>Chapter 2 | Linked Lists</strong></p>
+
+                        <p>2.1
+                        <a href="/posts/2.1.html">Write code to remove duplicates from an unsorted linked list.
+                            FOLLOW UP
+                            How would you solve this problem if a temporary buffer is not allowed?
+                        </a></p>
+
+                        <p>2.2
+                        <a href="/posts/2.2.html">Implement an algorithm to find the nth to last element of a singly linked list.
+                        </a></p>
+
+                        <p>2.3
+                        <a href="/posts/2.3.html">Implement an algorithm to delete a node in the middle of a single linked list, given
+                            only access to that node.
+                            EXAMPLE
+                            Input: the node ‘c’ from the linked list a->b->c->d->e
+                            Result: nothing is returned, but the new linked list looks like a->b->d->e
+                        </a></p>
+
+                        <p>2.4
+                        <a href="/posts/2.4.html">You have two numbers represented by a linked list, where each node contains a single
+                            digit. The digits are stored in reverse order, such that the 1’s digit is at the head of
+                            the list. Write a function that adds the two numbers and returns the sum as a linked
+                            list.
+                            EXAMPLE
+                            Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
+                            Output: 8 -> 0 -> 8
+                        </a></p>
+
+                        <p>2.5
+                        <a href="/posts/2.5.html">Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
+                            DEFINITION
+                            Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an
+                            earlier node, so as to make a loop in the linked list.
+                            EXAMPLE
+                            input: A -> B -> C -> D -> E -> C (the same C as earlier)
+                            output: C
+                        </a></p>
+
+                        <p><strong>Chapter 3 | Stacks and Queues</strong></p>
+
+                        <p>3.1
+                        <a href="/posts/3.1.html">Describe how you could use a single array to implement three stacks.
+                        </a></p>
+
+                        <p>3.2
+                        <a href="/posts/3.2.html">How would you design a stack which, in addition to push and pop, also has a function
+                            min which returns the minimum element? Push, pop and min should all operate in
+                            O(1) time.
+                        </a></p>
+
+                        <p>3.3
+                        <a href="/posts/3.3.html">Imagine a (literal) stack of plates. If the stack gets too high, it might topple.
+                            Therefore, in real life, we would likely start a new stack when the previous stack exceeds
+                            some threshold. Implement a data structure SetOfStacks that mimics this.
+                            SetOfStacks should be composed of several stacks, and should create a new stack once
+                            the previous one exceeds capacity. SetOfStacks.push() and SetOfStacks.pop() should
+                            behave identically to a single stack (that is, pop() should return the same values as it
+                            would if there were just a single stack).
+                            FOLLOW UP
+                            Implement a function popAt(int index) which performs a pop operation on a specific
+                            sub-stack.
+                        </a></p>
+
+                        <p>3.4
+                        <a href="/posts/3.4.html">In the classic problem of the Towers of Hanoi, you have 3 rods and N disks of different
+                            sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending
+                            order of size from top to bottom (e.g., each disk sits on top of an even larger one). You
+                            have the following constraints:
+                            (A) Only one disk can be moved at a time.
+                            (B) A disk is slid off the top of one rod onto the next rod.
+                            &copy; A disk can only be placed on top of a larger disk.
+                            Write a program to move the disks from the first rod to the last using Stacks.
+                        </a></p>
+
+                        <p>3.5
+                        <a href="/posts/3.5.html">Implement a MyQueue class which implements a queue using two stacks.
+                        </a></p>
+
+                        <p>3.6
+                        <a href="/posts/3.6.html">Write a program to sort a stack in ascending order. You should not make any assump-
+                            tions about how the stack is implemented. The following are the only functions that
+                            should be used to write this program: push | pop | peek | isEmpty.
+                        </a></p>
+
+                        <p><strong>Chapter 4 | Trees and Graphs</strong></p>
+
+                        <p>4.1
+                        <a href="/posts/4.1.html">Implement a function to check if a tree is balanced. For the purposes of this question,
+                            a balanced tree is defined to be a tree such that no two leaf nodes differ in distance
+                            from the root by more than one.
+                        </a></p>
+
+                        <p>4.2
+                        <a href="/posts/4.2.html">Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
+                        </a></p>
+
+                        <p>4.3
+                        <a href="/posts/4.3.html">Given a sorted (increasing order) array, write an algorithm to create a binary tree with
+                            minimal height.
+                        </a></p>
+
+                        <p>4.4
+                        <a href="/posts/4.4.html">Given a binary search tree, design an algorithm which creates a linked list of all the
+                            nodes at each depth (i.e., if you have a tree with depth D, you’ll have D linked lists).
+                        </a></p>
+
+                        <p>4.5
+                        <a href="/posts/4.5.html">Write an algorithm to find the ‘next’ node (i.e., in-order successor) of a given node in
+                            a binary search tree where each node has a link to its parent.
+                        </a></p>
+
+                        <p>4.6
+                        <a href="/posts/4.6.html">Design an algorithm and write code to find the first common ancestor of two nodes
+                            in a binary tree. Avoid storing additional nodes in a data structure. NOTE: This is not
+                            necessarily a binary search tree.
+                        </a></p>
+
+                        <p>4.7
+                        <a href="/posts/4.7.html">You have two very large binary trees: T1, with millions of nodes, and T2, with hun-
+                            dreds of nodes. Create an algorithm to decide if T2 is a subtree of T1.
+                        </a></p>
+
+                        <p>4.8
+                        <a href="/posts/4.8.html">You are given a binary tree in which each node contains a value. Design an algorithm
+                            to print all paths which sum up to that value. Note that it can be any path in the tree
+                            - it does not have to start at the root.
+                        </a></p>
+
+                        <p><strong>Chapter 5 | Bit Manipulation</strong></p>
+
+                        <p>5.1
+                        <a href="/posts/5.1.html">You are given two 32-bit numbers, N and M, and two bit positions, i and j. Write a
+                            method to set all bits between i and j in N equal to M (e.g., M becomes a substring of
+                            N located at i and starting at j).
+                            EXAMPLE:
+                            Input: N = 10000000000, M = 10101, i = 2, j = 6
+                            Output: N = 10001010100
+                        </a></p>
+
+                        <p>5.2
+                        <a href="/posts/5.2.html">Given a (decimal - e.g. 3.72) number that is passed in as a string, print the binary
+                            representation. If the number can not be represented accurately in binary, print “ERROR”
+                        </a></p>
+
+                        <p>5.3
+                        <a href="/posts/5.3.html">Given an integer, print the next smallest and next largest number that have the same
+                            number of 1 bits in their binary representation.
+                        </a></p>
+
+                        <p>5.4
+                        <a href="/posts/5.4.html">Explain what the following code does: ((n &amp; (n-1)) == 0).
+                        </a></p>
+
+                        <p>5.5
+                        <a href="/posts/5.5.html">Write a function to determine the number of bits required to convert integer A to
+                            integer B. Input: 31, 14 Output: 2
+                        </a></p>
+
+                        <p>5.6
+                        <a href="/posts/5.6.html">Write a program to swap odd and even bits in an integer with as few instructions as
+                            possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped, etc).
+                        </a></p>
+
+                        <p>5.7
+                        <a href="/posts/5.7.html">An array A[1&hellip;n] contains all the integers from 0 to n except for one number
+                            which is missing. In this problem, we cannot access an entire integer in A with
+                            a single operation. The elements of A are represented in binary, and the only
+                            operation we can use to access them is “fetch the jth bit of A[i]”, which
+                            takes constant time.
+                            Write code to find the missing integer. Can you do it in O(n) time?
+                        </a></p>
+
+                        <p><strong>Chapter 6 | Brain Teasers</strong></p>
+
+                        <p><a href="/posts/brain-teasers.html">Cracking the coding interview&ndash;Q6.1~Q6.6</a></p>
+
+                        <p><strong>Chapter 7 | Object Oriented Design</strong></p>
+
+                        <p>XDDDDDD</p>
+
+                        <p><strong>Chapter 8 | Recursion</strong></p>
+
+                        <p>8.1
+                        <a href="/posts/8.1.html">Write a method to generate the nth Fibonacci number.
+                        </a></p>
+
+                        <p>8.2
+                        <a href="/posts/8.2.html">Imagine a robot sitting on the upper left hand corner of an NxN
+                            grid. The robot can only move in two directions: right and down. How
+                            many possible paths are there for the robot?
+                            FOLLOW UP
+                            Imagine certain squares are “off limits”, such that the robot can
+                            not step on them.
+                            Design an algorithm to get all possible paths for the robot.
+                        </a></p>
+
+                        <p>8.3
+                        <a href="/posts/8.3.html">Write a method that returns all subsets of a set.
+                        </a></p>
+
+                        <p>8.4
+                        <a href="/posts/8.4.html">Write a method to compute all permutations of a string.
+                        </a></p>
+
+                        <p>8.5
+                        <a href="/posts/8.5.html">Implement an algorithm to print all valid (e.g., properly opened
+                            and closed) combinations of n-pairs of parentheses.
+                            EXAMPLE:
+                            input: 3 (e.g., 3 pairs of parentheses)
+                            output: ()()(), ()(()), (())(), ((()))
+                        </a></p>
+
+                        <p>8.6
+                        <a href="/posts/8.6.html">Implement the “paint fill” function that one might see on many
+                            image editing programs. That is, given a screen (represented by a 2
+                            dimensional array of Colors), a point, and a new color, fill in the
+                            surrounding area until you hit a border of that color.
+                        </a></p>
+
+                        <p>8.7
+                        <a href="/posts/8.7.html">Given an infinite number of quarters (25 cents), dimes (10 cents),
+                            nickels (5 cents) and pennies (1 cent), write code to calculate the
+                            number of ways of representing n cents.
+                        </a></p>
+
+                        <p>8.8
+                        <a href="/posts/8.8.html">Write an algorithm to print all ways of arranging eight queens on
+                            a chess board so that none of them share the same row, column or
+                            diagonal.
+                        </a></p>
+
+                        <p><strong>Chapter 9 | Sorting and Searching</strong></p>
+
+                        <p>9.1
+                        <a href="/posts/9.1.html">You are given two sorted arrays, A and B, and A has a large enough
+                            buffer at the end to hold B. Write a method to merge B into A in
+                            sorted order.
+                        </a></p>
+
+                        <p>9.2
+                        <a href="/posts/9.2.html">Write a method to sort an array of strings so that all the anagrams
+                            are next to each other.
+                        </a></p>
+
+                        <p>9.3
+                        <a href="/posts/9.3.html">Given a sorted array of n integers that has been rotated an unknown
+                            number of times, give an O(log n) algorithm that finds an element in
+                            the array. You may assume that the array was originally sorted in
+                            increasing order.
+                            EXAMPLE:
+                            Input: find 5 in array (15 16 19 20 25 1 3 4 5 7 10 14)
+                            Output: 8 (the index of 5 in the array)
+                        </a></p>
+
+                        <p>9.4
+                        <a href="/posts/9.4.html">If you have a 2 GB file with one string per line, which sorting
+                            algorithm would you use to sort the file and why?
+                        </a></p>
+
+                        <p>9.5
+                        <a href="/posts/9.5.html">Given a sorted array of strings which is interspersed with empty
+                            strings, write a method to find the location of a given string.
+                            Example: find “ball” in [“at”, “”, “”, “”, “ball”, “”, “”, “car”,
+                            “”, “”, “dad”, “”, “”] will return 4
+                            Example: find “ballcar” in
+                            [“at”, “”, “”, “”, “”, “ball”, “car”, “”,
+                            “”, “dad”, “”, “”] will return -1
+                        </a></p>
+
+                        <p>9.6
+                        <a href="/posts/9.6.html">Given a matrix in which each row and each column is sorted, write a
+                            method to find an element in it.
+                        </a></p>
+
+                        <p>9.7
+                        <a href="/posts/9.7.html">A circus is designing a tower routine consisting of people standing
+                            atop one another’s shoulders. For practical and aesthetic reasons,
+                            each person must be both shorter and lighter than the person below
+                            him or her. Given the heights and weights of each person in the
+                            circus, write a method to compute the largest possible number of
+                            people in such a tower.
+                            EXAMPLE:
+                            Input (ht, wt): (65, 100) (70, 150) (56, 90) (75, 190) (60, 95) (68, 110)
+                            Output: The longest tower is length 6 and includes from top to bottom: (56, 90)
+                            (60,95) (65,100) (68,110) (70,150) (75,190)
+                        </a></p>
+
+                        <p><strong>Chapter 10 | Mathematical</strong></p>
+
+                        <p><a href="/posts/ctci-ch10-math.html">Cracking the coding interview&ndash;Q10.1~Q10.7
+                        </a></p>
+
+                        <p><strong>Chapter 11 | Testing</strong></p>
+
+                        <p><a href="/posts/ctci-ch11-testing.html">Cracking the coding interview&ndash;Q11.1~Q11.6
+                        </a></p>
+
+                        <p><strong>Chapter 12 | System Design and Memory Limits</strong></p>
+
+                        <p>12.1
+                        <a href="/posts/12.1.html">If you were integrating a feed of end of day stock price
+                            information (open, high, low,and closing price) for 5,000
+                            companies, how would you do it? You are responsible for
+                            the development, rollout and ongoing monitoring and maintenance
+                            of the feed. Describe the different methods you considered and
+                            why you would recommend your approach. The feed is delivered once
+                            per trading day in a comma-separated format via an FTP site. The
+                            feed will be used by 1000 daily users in a web application.
+                        </a></p>
+
+                        <p>12.2
+                        <a href="/posts/12.2.html">How would you design the data structures for a very large
+                            social network (Facebook,LinkedIn, etc)? Describe how you would
+                            design an algorithm to show the connection, or path, between two
+                            people (e.g., Me -> Bob -> Susan -> Jason -> You).
+                        </a></p>
+
+                        <p>12.3
+                        <a href="/posts/12.3.html">Given an input file with four billion integers, provide an
+                            algorithm to generate an integer which is not contained in the
+                            file. Assume you have 1 GB of memory.
+                            FOLLOW UP
+                            What if you have only 10 MB of memory?
+                        </a></p>
+
+                        <p>12.4
+                        <a href="/posts/12.4.html">You have an array with all the numbers from 1 to N, where N is
+                            at most 32,000. The array may have duplicate entries and you do
+                            not know what N is. With only 4KB of memory available, how would
+                            you print all duplicate elements in the array?
+                        </a></p>
+
+                        <p>12.5
+                        <a href="/posts/12.5.html">If you were designing a web crawler, how would you avoid getting
+                            into infinite loops?
+                        </a></p>
+
+                        <p>12.6
+                        <a href="/posts/12.6.html">You have a billion urls, where each is a huge page. How do you
+                            detect the duplicate documents?
+                        </a></p>
+
+                        <p>12.7
+                        <a href="/posts/12.7.html">You have to design a database that can store terabytes of data.
+                            It should support efficient range queries. How would you do it?
+                        </a></p>
+
+                        <p><strong>Chapter 13 | C++</strong></p>
+
+                        <p>13.1
+                        <a href="/posts/13.1.html">Write a method to print the last K lines of an input file using C++.
+                        </a></p>
+
+                        <p>13.2
+                        <a href="/posts/13.2.html">Compare and contrast a hash table vs. an STL map. How is a hash
+                            table implemented?If the number of inputs is small, what data
+                            structure options can be used instead of a hash table?
+                        </a></p>
+
+                        <p>13.3
+                        <a href="/posts/13.3.html">How do virtual functions work in C++?
+                        </a></p>
+
+                        <p>13.4
+                        <a href="/posts/13.4.html">What is the difference between deep copy and shallow copy? Explain
+                            how you would use each.
+                        </a></p>
+
+                        <p>13.5
+                        <a href="/posts/13.5.html">What is the significance of the keyword “volatile” in C?
+                        </a></p>
+
+                        <p>13.6
+                        <a href="/posts/13.6.html">What is name hiding in C++?
+                        </a></p>
+
+                        <p>13.7
+                        <a href="/posts/13.7.html">Why does a destructor in base class need to be declared virtual?
+                        </a></p>
+
+                        <p>13.8
+                        <a href="/posts/13.8.html">Write a method that takes a pointer to a Node structure as a
+                            parameter and returns a complete copy of the passed-in data
+                            structure. The Node structure contains two pointers to other Node
+                            structures.
+                        </a></p>
+
+                        <p>13.9
+                        <a href="/posts/13.9.html">Write a smart pointer (smart_ptr) class.
+                        </a></p>
+
+                        <p><strong>Chapter 14 | Java</strong></p>
+
+                        <p>Pass</p>
+
+                        <p><strong>Chapter 15 | Databases</strong></p>
+
+                        <p>15.1
+                        <a href="/posts/15.1.html">Write a method to find the number of employees in each department.
+                        </a></p>
+
+                        <p>15.2
+                        <a href="/posts/15.2.html">What are the different types of joins? Please explain how they
+                            differ and why certain types are better in certain situations.
+                        </a></p>
+
+                        <p>15.3
+                        <a href="/posts/15.3.html">What is denormalization? Explain the pros and cons.
+                        </a></p>
+
+                        <p>15.4
+                        <a href="/posts/15.4.html">Draw an entity-relationship diagram for a database with companies,
+                            people, and professionals (people who work for companies).
+                        </a></p>
+
+                        <p>15.5
+                        <a href="/posts/15.5.html">Imagine a simple database storing information for students’ grades.
+                            Design what this database might look like, and provide a SQL query
+                            to return a list of the honor roll students (top 10%), sorted by
+                            their grade point average.
+                        </a></p>
+
+                        <p><strong>Chapter 16 | Low Level</strong></p>
+
+                        <p>16.1
+                        <a href="/posts/16.1.html">Explain the following terms: virtual memory, page fault, thrashing.
+                        </a></p>
+
+                        <p>16.5
+                        <a href="/posts/16.5.html">Write a program to find whether a machine is big endian or little
+                            endian.
+                        </a></p>
+
+                        <p>16.10
+                        <a href="/posts/16.10.html">Write a function called my2DAlloc which allocates a two dimensional
+                            array. Minimize the number of calls to malloc and make sure that the
+                            memory is accessible by the notation arr[i][j].
+                        </a></p>
+
+                        <p><strong>Chapter 17 | Networking</strong></p>
+
+                        <p>17.1
+                        <a href="/posts/17.1.html">Explain what happens, step by step, after you type a URL into a
+                            browser. Use as much detail as possible.  <br/>
+                        </a></p>
+
+                        <p>17.2
+                        <a href="/posts/17.2.html">Explain any common routing protocol in detail. For example: BGP,
+                            OSPF, RIP.
+                        </a></p>
+
+                        <p>17.3
+                        <a href="/posts/17.3.html">Compare and contrast the IPv4 and IPv6 protocols.
+                        </a></p>
+
+                        <p>17.4
+                        <a href="/posts/17.4.html">What is a network / subnet mask? Explain how host A sends a
+                            message / packet to host B when: (a) both are on same network
+                            and (b) both are on different networks.
+                            Explain which layer makes the routing decision and how.
+                        </a></p>
+
+                        <p>17.5
+                        <a href="/posts/17.5.html">What are the differences between TCP and UDP? Explain how TCP
+                            handles reliable delivery (explain ACK mechanism), flow control
+                            (explain TCP sender’s / receiver’s window) and congestion control.<br/>
+                        </a></p>
+
+                        <p><strong>Chapter 18 | Threads and Locks</strong></p>
+
+                        <p>18.1
+                        <a href="/posts/18.1.html">What’s the difference between a thread and a process?
+                        </a></p>
+
+                        <p>18.2
+                        <a href="/posts/18.2.html">How can you measure the time spent in a context switch?
+                        </a></p>
+
+                        <p>18.3
+                        <a href="/posts/18.3.html">Implement a singleton design pattern as a template such that, for
+                            any given class Foo, you can call Singleton::instance() and get a
+                            pointer to an instance of a singleton of type Foo. Assume the
+                            existence of a class Lock which has acquire() and release()
+                            methods. How could you make your implementation thread safe and
+                            exception safe?
+                        </a></p>
+
+                        <p>18.5
+                        <a href="/posts/18.5.html">Suppose we have the following code:&hellip;
+                            i)  Can you design a mechanism to make sure that B is executed after
+                            A, and C is executed after B?
+                            ii) Suppose we have the following code to use class Foo. We do not
+                            know how the threads will be scheduled in the OS.
+                            Can you design a mechanism to make sure that all the methods will be
+                            executed in sequence?
+                        </a></p>
+
+                        <p><strong>Chapter 19 | Moderate</strong></p>
+
+                        <p>19.1
+                        <a href="/posts/19.1.html">Write a function to swap a number in place without temporary
+                            variables.
+                        </a></p>
+
+                        <p>19.2
+                        <a href="/posts/19.2.html">Design an algorithm to figure out if someone has won in a game of
+                            tic-tac-toe.
+                        </a></p>
+
+                        <p>19.3
+                        <a href="/posts/19.3.html">Write an algorithm which computes the number of trailing zeros in n
+                            factorial.
+                        </a></p>
+
+                        <p>19.4
+                        <a href="/posts/19.4.html">Write a method which finds the maximum of two numbers. You should
+                            not use if-else or any other comparison operator. <br/>
+                        </a></p>
+
+                        <p>19.5
+                        <a href="/posts/19.5.html">The Game of Master Mind is played as follows:<br/>
+                            The computer has four slots containing balls that are red &reg;,
+                            yellow (Y), green (G) or blue (B). For example, the computer might
+                            have RGGB (e.g., Slot #1 is red, Slots #2 and #3 are green, Slot #4
+                            is blue).
+                            You, the user, are trying to guess the solution. You might, for
+                            example, guess YRGB. When you guess the correct color for the
+                            correct slot, you get a “hit”. If you guess a color that exists but
+                            is in the wrong slot, you get a “pseudo-hit”. For example, the
+                            guess YRGB has 2 hits and one pseudo hit.
+                            For each guess, you are told the number of hits and pseudo-hits.
+                            Write a method that, given a guess and a solution, returns the
+                            number of hits and pseudo hits.
+                        </a></p>
+
+                        <p>19.7
+                        <a href="/posts/19.7.html">You are given an array of integers (both positive and negative).
+                            Find the continuous sequence with the largest sum. Return the sum.<br/>
+                        </a></p>
+
+                        <p>19.8
+                        <a href="/posts/19.8.html">Design a method to find the frequency of occurrences of any given
+                            word in a book.
+                        </a></p>
+
+                        <p>19.10
+                        <a href="/posts/19.10.html">Write a method to generate a random number between 1 and 7, given a
+                            method that generates a random number between 1 and 5 (i.e.,
+                            implement rand7() using rand5()). <br/>
+                        </a></p>
+
+                        <p>19.11
+                        <a href="/posts/19.11.html">Design an algorithm to find all pairs of integers within an array
+                            which sum to a specified value.
+                        </a></p>
+
+                        <p><strong>Chapter 20 | Hard</strong></p>
+
+                        <p>20.1
+                        <a href="/posts/20.1.html">Write a function that adds two numbers. You should not use + or any
+                            arithmetic operators.
+                        </a></p>
+
+                        <p>20.2
+                        <a href="/posts/20.2.html">Write a method to shuffle a deck of cards. It must be a perfect
+                            shuffle - in other words, each 52! permutations of the deck has to
+                            be equally likely. Assume that you are given a random number
+                            generator which is perfect.
+                        </a></p>
+
+                        <p>20.3
+                        <a href="/posts/20.3.html">Write a method to randomly generate a set of m integers from an
+                            array of size n. Each element must have equal probability of being
+                            chosen.
+                        </a></p>
+
+                        <p>20.4
+                        <a href="/posts/20.4.html">Write a method to count the number of 2s between 0 and n.
+                        </a></p>
+
+                        <p>20.5
+                        <a href="/posts/20.5.html">You have a large text file containing words. Given any two words,
+                            find the shortest distance (in terms of number of words) between
+                            them in the file. Can you make the searching operation in O(1) time?
+                            What about the space complexity for your solution?
+                        </a></p>
+
+                        <p>20.6
+                        <a href="/posts/20.6.html">Describe an algorithm to find the largest 1 million numbers in 1
+                            billion numbers. Assume that the computer memory can hold all one
+                            billion numbers.
+                        </a></p>
+
+                        <p>20.7
+                        <a href="/posts/20.7.html">Write a program to find the longest word made of other words in a
+                            list of words.
+                            EXAMPLE
+                            Input: test, tester, testertest, testing, testingtester
+                            Output: testingtester
+                        </a></p>
+
+                        <p>20.8
+                        <a href="/posts/20.8.html">Given a string s and an array of smaller strings T, design a method
+                            to search s for each small string in T.
+                        </a></p>
+
+                        <p>20.9
+                        <a href="/posts/20.9.html">Numbers are randomly generated and passed to a method. Write a
+                            program to find and maintain the median value as new values are
+                            generated.
+                        </a></p>
+
+                        <p>20.11
+                        <a href="/posts/20.11.html">Imagine you have a square matrix, where each cell is filled with
+                            either black or white. Design an algorithm to find the maximum
+                            subsquare such that all four borders are filled with black pixels.
+                        </a></p>
+
+                        <p>20.12
+                        <a href="/posts/20.12.html">Given an NxN matrix of positive and negative integers, write code
+                            to find the submatrix with the largest possible sum.  <br/>
+                        </a></p>
+
+                    </div>
+
+                    <br>
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style">
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_tsohu"></a>
+                        <a class="jiathis_button_t163"></a>
+                        <a class="jiathis_button_douban"></a>
+                        <a class="jiathis_button_renren"></a>
+                        <a class="jiathis_button_zhuaxia"></a>
+                        <a class="jiathis_button_fanfou"></a>
+                        <a class="jiathis_button_twitter"></a>
+                        <a class="jiathis_button_fb"></a>
+                        <a class="jiathis_button_gmail"></a>
+                        <a class="jiathis_button_linkedin"></a>
+                        <a class="jiathis_button_friendfeed"></a>
+                        <a class="jiathis_button_digg"></a>
+                        <a href="http://www.jiathis.com/share?uid=1939314" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+                        <a class="jiathis_counter_style"></a>
+                    </div>
+                    <script type="text/javascript" >
+                        var jiathis_config={
+                            data_track_clickback:true,
+                            summary:" // By @Hawstein ",
+                            hideMore:false
+                        }
+                    </script>
+
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1939314" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+                    <br>
+
+                    <div id="related">
+                        <h2>Random Posts</h2>
+                        <ul class="posts">
+
+                            <li><span>01 Jul 2014</span> &raquo; <a href="/posts/make-thiner-tspl.html">把《The Swift Programming Language》读薄</a></li>
+
+                            <li><span>06 Mar 2014</span> &raquo; <a href="/posts/make-thiner-make-friend-with-time.html">把《把时间当作朋友》读薄</a></li>
+
+                            <li><span>20 Jan 2014</span> &raquo; <a href="/posts/google-java-style.html">Google Java编程风格指南</a></li>
+
+                            <li><span>11 Aug 2013</span> &raquo; <a href="/posts/make-thiner-programming-pearls.html">把《编程珠玑》读薄</a></li>
+
+                            <li><span>23 Jul 2013</span> &raquo; <a href="/posts/lru-cache-impl.html">如何用C++实现一个LRU Cache</a></li>
+
+                        </ul>
+                    </div>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+
+                        var disqus_shortname = 'hawstein';
+                        (function() {
+                         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                         })();
+                        </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
+                    <div id="footer">
+                        Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.  Last updated at 2014-11-07 05:01:51 +0000.
+                    </div>
 
-<div id="post">
-<h1> <a href = "/posts/Thrust-Passing-device_vector-to-Kernel.html">
-    Newest Post - Thrust -  Passing device_vector to Kernel
-</a></h1>
-
-
-
-
-<div class="authoring">
-  November 20, 2014
-</div>
-
-<p>Thrust makes it convenient to handle data with its <code>device_vector</code>. But, things get messy
-when the <code>device_vector</code> needs to be passed to your own kernel. Thrust data types are not
-understood by the kernel and need to be converted back to its underlying pointer. This is done using <code>thrust::raw_pointer_cast</code>:</p>
-
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;thrust/device_vector.h&gt;</span>
-<span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">iVec</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*</span><span class="n">iArray</span> <span class="o">=</span> <span class="n">thrust</span><span class="o">::</span><span class="n">raw_pointer_cast</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">iVec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
-<span class="n">fooKernel</span><span class="o">&lt;&lt;&lt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">&gt;&gt;&gt;</span><span class="p">(</span> <span class="n">iArray</span> <span class="p">);</span></code></pre></div>
+                </div>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                <script src="/assets/js/app.js"></script>
+                <script type="text/javascript">
 
 
-<p>Inside any kernel, one frequently needs not just a pointer to the array,
-but also the length of the array. Thus, it is useful to <code>convert device_vector</code>
-to a structure that holds both a pointer to the array and its length. Creating
-such a structure and its conversion function is easy thanks to templates:</p>
-
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="c1">// Template structure to pass to kernel</span>
-<span class="k">template</span> <span class="o">&lt;</span> <span class="k">typename</span> <span class="n">T</span> <span class="o">&gt;</span>
-<span class="k">struct</span> <span class="n">KernelArray</span>
-<span class="p">{</span>
-    <span class="n">T</span><span class="o">*</span>  <span class="n">_array</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">_size</span><span class="p">;</span>
- <span class="p">};</span>
-
-<span class="c1">// Function to convert device_vector to structure</span>
-<span class="k">template</span> <span class="o">&lt;</span> <span class="k">typename</span> <span class="n">T</span> <span class="o">&gt;</span>
-<span class="n">KernelArray</span><span class="o">&lt;</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="n">convertToKernel</span><span class="p">(</span> <span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span> <span class="n">T</span> <span class="o">&gt;&amp;</span> <span class="n">dVec</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">KernelArray</span><span class="o">&lt;</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="n">kArray</span><span class="p">;</span>
-    <span class="n">tArray</span><span class="p">.</span><span class="n">_array</span> <span class="o">=</span> <span class="n">thrust</span><span class="o">::</span><span class="n">raw_pointer_cast</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">dVec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
-    <span class="n">tArray</span><span class="p">.</span><span class="n">_size</span>  <span class="o">=</span> <span class="p">(</span> <span class="kt">int</span> <span class="p">)</span> <span class="n">dVec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-    <span class="k">return</span> <span class="n">kArray</span><span class="p">;</span>
- <span class="p">}</span></code></pre></div>
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-37837952-1']);
+                    _gaq.push(['_trackPageview']);
 
 
-<p>Passing <code>device_vector</code> to kernels and accessing its array inside the kernel is easy thanks to this infrastructure:</p>
-
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">iVec</span><span class="p">;</span>
-<span class="n">fooKernel</span><span class="o">&lt;&lt;&lt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">&gt;&gt;&gt;</span><span class="p">(</span> <span class="n">convertToKernel</span><span class="p">(</span> <span class="n">iVec</span> <span class="p">)</span> <span class="p">);</span> <span class="c1">// Explicit conversion from iVec to KernelArray&lt; int &gt;</span>
-<span class="n">__global__</span> <span class="nf">fooKernel</span><span class="p">(</span> <span class="n">KernelArray</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">inArray</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">inArray</span><span class="p">.</span><span class="n">_size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span> <span class="p">)</span>
-        <span class="n">something</span> <span class="o">=</span> <span class="n">inArray</span><span class="p">.</span><span class="n">_array</span><span class="p">[</span> <span class="n">i</span> <span class="p">];</span>
-        <span class="c1">// ...</span>
-    <span class="k">return</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+                    (function() {
+                     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                     })();
 
 
-<p>You can take it a notch higher and make the conversion from <code>device_vector</code> to <code>KernelArray</code>
-to be implicit. This can be done by adding a constructor to <code>KernelArray</code> that takes one
-input parameter of type <code>device_vector</code>. With such a constructor, you can now pass
-a <code>device_vector</code> seamlessly to the kernel:</p>
+                    </script>
 
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">iVec</span><span class="p">;</span>
-<span class="n">fooKernel</span><span class="o">&lt;&lt;&lt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">&gt;&gt;&gt;</span><span class="p">(</span> <span class="n">iVec</span> <span class="p">);</span> <span class="c1">// Implicit conversion from iVec to KernelArray&lt; int &gt;</span>
-<span class="n">__global__</span> <span class="nf">fooKernel</span><span class="p">(</span> <span class="n">KernelArray</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">inArray</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="c1">// ...</span>
-<span class="p">}</span></code></pre></div>
-
-
-
-
-</div>
-
-
-
-    <div id="footer">
-  Powered by Last updated at 2014-11-20 21:33:20 +0000.
-</div>
-
-  </div>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="/assets/js/app.js"></script>
-  <script type="text/javascript">
-
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-37837952-1']);
-  _gaq.push(['_trackPageview']);
-
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-
-</script>
-
-      </body>
+                </body>
 </html>
